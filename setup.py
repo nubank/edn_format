@@ -14,9 +14,7 @@ setup(name="edn_format",
       install_requires=[
           "pytz==2016.10",
           "pyRFC3339==1.0",
-          "ply==3.10",
-          "pytest",
-          "pytest-xdist"
+          "ply==3.10"
       ],
       license="Apache 2.0",
       packages=['edn_format'],
