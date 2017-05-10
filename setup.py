@@ -5,16 +5,16 @@ except ImportError:
     from distutils.core import setup
 
 setup(name="edn_format",
-      version="0.5.10",
+      version="0.5.12",
       author="Swaroop C H",
       author_email="swaroop@swaroopch.com",
       description="EDN format reader and writer in Python",
       long_description=open('README.md').read(),
       url="https://github.com/swaroopch/edn_format",
       install_requires=[
-          "pytz==2015.4",
+          "pytz==2016.10",
           "pyRFC3339==1.0",
-          "ply==3.6",
+          "ply==3.10",
           "pytest",
           "pytest-xdist"
       ],
