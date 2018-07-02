@@ -12,7 +12,7 @@ setup(name="edn_format",
       url="https://github.com/swaroopch/edn_format",
       install_requires=[
           "pytz>=2016.10",
-          "pyRFC3339>=0.2,<2",
+          "pyRFC3339>=1.0,<2",
           "ply>=3.10,<4",
           "pytest",
           "pytest-xdist"
