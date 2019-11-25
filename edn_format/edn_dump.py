@@ -94,8 +94,6 @@ def udump(obj,
         return '({})'.format(seq(obj, **kwargs))
     elif isinstance(obj, (list, ImmutableList)):
         return '[{}]'.format(seq(obj, **kwargs))
-    elif isinstance(obj, ImmutableList):
-        return '[{}]'.format(seq(obj, **kwargs))
     elif isinstance(obj, set) or isinstance(obj, frozenset):
         if sort_sets:
             obj = sorted(obj)

@@ -3,20 +3,22 @@ try:
 except ImportError:
     from distutils.core import setup
 
+try:
+    from pip.req import parse_requirements
+except ImportError:
+    from pip._internal.req import parse_requirements
+
+requirements = [str(ir.req) for ir in parse_requirements('requirements.txt', session=False)]
+
 setup(name="edn_format",
-      version="0.6.6-nu",
+      version="0.6.5",
       author="Swaroop C H",
       author_email="swaroop@swaroopch.com",
       description="EDN format reader and writer in Python",
       long_description=open('README.md').read(),
+      long_description_content_type='text/markdown',
       url="https://github.com/swaroopch/edn_format",
-      install_requires=[
-          "pytz>=2016.10",
-          "pyRFC3339>=1.0,<2",
-          "ply>=3.10,<4",
-          "pytest",
-          "pytest-xdist"
-      ],
+      install_requires=requirements,
       license="Apache 2.0",
       packages=['edn_format'],
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
